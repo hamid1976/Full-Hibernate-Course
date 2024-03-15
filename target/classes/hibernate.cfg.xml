@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/myhiber?useSSL=false</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="cache.use_second_level_cache">true</property>
+        <property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+
+
+        <mapping class="com.tut.Student"/>
+        <mapping class="com.tut.Address"/>
+        <mapping class="com.tut.FetchDemo"/>
+        <mapping class="com.map.Question"/>
+        <mapping class="com.map.Answer"/>
+        <mapping class="com.OneToOne.Student1"/>
+        <mapping class="com.OneToOne.Department"/>
+        <mapping class="com.OneToMany.Faculty"/>
+        <mapping class="com.OneToMany.Department1"/>
+        <mapping class="com.ManyToMany.Emp"/>
+        <mapping class="com.ManyToMany.Project"/>
+<!--        <mapping class="com.WithoutXmlConfiguration.HibernateUsingAnnotation"/>-->
+
+    </session-factory>
+
+</hibernate-configuration>
